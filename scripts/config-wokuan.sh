@@ -1,7 +1,7 @@
 #!/bin/sh
 eval `dbus export wokuan`
 source /koolshare/scripts/base.sh
-version="0.0.1"
+version="0.0.2"
 wokuancru=$(cru l | grep "wokuan")
 startwokuan=$(ls -l /wokuan/init.d/ | grep "S81Wokuan")
 
@@ -12,8 +12,8 @@ HTTP_REQ="wget --no-check-certificate -O - "
 POST_ARG="--post-data="
 
 #定义更新相关地址
-UPDATE_VERSION_URL="https://raw.githubusercontent.com/koolshare/koolshare.github.io/master/wokuan/version"
-UPDATE_TAR_URL="https://raw.githubusercontent.com/koolshare/koolshare.github.io/master/wokuan/wokuan.tar.gz"
+UPDATE_VERSION_URL="https://raw.githubusercontent.com/wangchll/wokuan/master/version"
+UPDATE_TAR_URL="https://raw.githubusercontent.com/wangchll/wokuan/master/wokuan.tar.gz"
 
 #获取迅雷用户uid
 get_wokuan(){
